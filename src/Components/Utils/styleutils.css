@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide horizontal overflow to prevent scrolling */
+  }
+  
+  #coding_buddy_editor {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0; /* Initially, the div is hidden */
+    transform: translateX(-10%); /* Start position outside the viewport on the left */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Animation properties */
+  }
+  
+  /* Add a class to trigger the appear animation */
+  .appear {
+    opacity: 1;
+    transform: translateX(0); /* End position at 0 (visible) */
+  }
+  
+  /* Add a class to trigger the disappear animation */
+  .disappear {
+    opacity: 0;
+    transform: translateX(-10px); /* End position outside the viewport on the right */
+  }
+  

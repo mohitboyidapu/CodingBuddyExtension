@@ -1,0 +1,125 @@
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Components/Navbar/Navbar.css ***!
+  \************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap);
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 300px;
+  min-height: 500px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*!***************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Components/Utils/styleutils.css ***!
+  \***************************************************************************************/
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide horizontal overflow to prevent scrolling */
+  }
+  
+  #coding_buddy_editor {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0; /* Initially, the div is hidden */
+    transform: translateX(-10%); /* Start position outside the viewport on the left */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Animation properties */
+  }
+  
+  /* Add a class to trigger the appear animation */
+  .appear {
+    opacity: 1;
+    transform: translateX(0); /* End position at 0 (visible) */
+  }
+  
+  /* Add a class to trigger the disappear animation */
+  .disappear {
+    opacity: 0;
+    transform: translateX(-10px); /* End position outside the viewport on the right */
+  }
+  
+/*!****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Components/Navbar/Navbar.css (1) ***!
+  \****************************************************************************************/
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav_logo {
+  font-family: poppins;
+}
+.nav-links {
+  display: flex;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-brand .logo {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 10px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: #00bcd4;
+}
+
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css ***!
+  \***************************************************************/
+body{
+  background-color: #464646;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztFQUNsQyxnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0U7YUFDVztBQUNiOzs7OztBQ2RBO0lBQ0ksU0FBUztJQUNULFVBQVU7SUFDVixnQkFBZ0IsRUFBRSxrREFBa0Q7RUFDdEU7O0VBRUE7SUFDRSxZQUFZO0lBQ1osYUFBYTtJQUNiLHlCQUF5QjtJQUN6QixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLE9BQU87SUFDUCxVQUFVLEVBQUUsaUNBQWlDO0lBQzdDLDJCQUEyQixFQUFFLG9EQUFvRDtJQUNqRiw0REFBNEQsRUFBRSx5QkFBeUI7RUFDekY7O0VBRUEsZ0RBQWdEO0VBQ2hEO0lBQ0UsVUFBVTtJQUNWLHdCQUF3QixFQUFFLGdDQUFnQztFQUM1RDs7RUFFQSxtREFBbUQ7RUFDbkQ7SUFDRSxVQUFVO0lBQ1YsNEJBQTRCLEVBQUUsbURBQW1EO0VBQ25GOzs7OztBQzFCRjs7Ozs7Ozs7Ozs7R0FXRzs7QUFFSDtFQUNFLFNBQVM7RUFDVCxVQUFVO0VBQ1Ysc0JBQXNCO0FBQ3hCOztBQUVBLGtCQUFrQjtBQUNsQjtFQUNFLHNCQUFzQjtFQUN0QixXQUFXO0VBQ1gsYUFBYTtFQUNiLDhCQUE4QjtFQUM5QixtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixxQkFBcUI7RUFDckIsV0FBVztBQUNiOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osZUFBZTtFQUNmLGVBQWU7RUFDZixXQUFXO0VBQ1gsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7Ozs7QUMxREE7RUFDRSx5QkFBeUI7QUFDM0IsQyIsInNvdXJjZXMiOlsid2VicGFjazovL2Nocm9tZS1leHRlbnNpb24tY29kaW5nLWJ1ZGR5Ly4vc3JjL2luZGV4LmNzcyIsIndlYnBhY2s6Ly9jaHJvbWUtZXh0ZW5zaW9uLWNvZGluZy1idWRkeS8uL3NyYy9Db21wb25lbnRzL1V0aWxzL3N0eWxldXRpbHMuY3NzIiwid2VicGFjazovL2Nocm9tZS1leHRlbnNpb24tY29kaW5nLWJ1ZGR5Ly4vc3JjL0NvbXBvbmVudHMvTmF2YmFyL05hdmJhci5jc3MiLCJ3ZWJwYWNrOi8vY2hyb21lLWV4dGVuc2lvbi1jb2RpbmctYnVkZHkvLi9zcmMvQXBwLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgbWFyZ2luOiAwO1xuICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBcIlNlZ29lIFVJXCIsIFwiUm9ib3RvXCIsIFwiT3h5Z2VuXCIsXG4gICAgXCJVYnVudHVcIiwgXCJDYW50YXJlbGxcIiwgXCJGaXJhIFNhbnNcIiwgXCJEcm9pZCBTYW5zXCIsIFwiSGVsdmV0aWNhIE5ldWVcIixcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbiAgbWluLXdpZHRoOiAzMDBweDtcbiAgbWluLWhlaWdodDogNTAwcHg7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgXCJDb3VyaWVyIE5ld1wiLFxuICAgIG1vbm9zcGFjZTtcbn1cbiIsImJvZHkge1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47IC8qIEhpZGUgaG9yaXpvbnRhbCBvdmVyZmxvdyB0byBwcmV2ZW50IHNjcm9sbGluZyAqL1xuICB9XG4gIFxuICAjY29kaW5nX2J1ZGR5X2VkaXRvciB7XG4gICAgd2lkdGg6IDEwMHB4O1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwN2JmZjtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogMDtcbiAgICBvcGFjaXR5OiAwOyAvKiBJbml0aWFsbHksIHRoZSBkaXYgaXMgaGlkZGVuICovXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC0xMCUpOyAvKiBTdGFydCBwb3NpdGlvbiBvdXRzaWRlIHRoZSB2aWV3cG9ydCBvbiB0aGUgbGVmdCAqL1xuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxcyBlYXNlLWluLW91dCwgb3BhY2l0eSAxcyBlYXNlLWluLW91dDsgLyogQW5pbWF0aW9uIHByb3BlcnRpZXMgKi9cbiAgfVxuICBcbiAgLyogQWRkIGEgY2xhc3MgdG8gdHJpZ2dlciB0aGUgYXBwZWFyIGFuaW1hdGlvbiAqL1xuICAuYXBwZWFyIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwKTsgLyogRW5kIHBvc2l0aW9uIGF0IDAgKHZpc2libGUpICovXG4gIH1cbiAgXG4gIC8qIEFkZCBhIGNsYXNzIHRvIHRyaWdnZXIgdGhlIGRpc2FwcGVhciBhbmltYXRpb24gKi9cbiAgLmRpc2FwcGVhciB7XG4gICAgb3BhY2l0eTogMDtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwcHgpOyAvKiBFbmQgcG9zaXRpb24gb3V0c2lkZSB0aGUgdmlld3BvcnQgb24gdGhlIHJpZ2h0ICovXG4gIH1cbiAgIiwiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVBvcHBpbnM6aXRhbCx3Z2h0QDAsMjAwOzAsMzAwOzAsNDAwOzAsNTAwOzAsNjAwOzAsNzAwOzEsMzAwOzEsNDAwOzEsNTAwJmRpc3BsYXk9c3dhcFwiKTtcblxuLyogLm5hdmJhciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMXJlbTtcbn1cbi5uYXZfbG9nbyB7XG4gIGZvbnQtZmFtaWx5OiBwb3BwaW5zO1xufVxuLm5hdi1saW5rcyB7XG4gIGRpc3BsYXk6IGZsZXg7XG59ICovXG5cbioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5cbi8qIE5hdmJhciBzdHlsZXMgKi9cbi5uYXZiYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzO1xuICBjb2xvcjogI2ZmZjtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAxMHB4IDIwcHg7XG59XG5cbi5uYXZiYXItYnJhbmQgLmxvZ28ge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4ubmF2LWxpbmtzIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLm5hdi1saW5rcyBsaSB7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuLm5hdi1saW5rcyBidXR0b24ge1xuICBiYWNrZ3JvdW5kOiBub25lO1xuICBib3JkZXI6IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBjb2xvcjogI2ZmZjtcbiAgdHJhbnNpdGlvbjogY29sb3IgMC4zcyBlYXNlO1xufVxuXG4ubmF2LWxpbmtzIGJ1dHRvbjpob3ZlciB7XG4gIGNvbG9yOiAjMDBiY2Q0O1xufVxuIiwiYm9keXtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQ2NDY0Njtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

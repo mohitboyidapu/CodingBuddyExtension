@@ -12,10 +12,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +32,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3",
+    "svg-url-loader": "^8.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
