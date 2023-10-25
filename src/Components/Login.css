@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.LoginPageContainer { 
+  text-align: center;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+  font-size: 1.3rem;
+}
+
+.signUp_outerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.login_comp{
+  margin-bottom: 1rem;
+}
+
+.form-group{
+  width: 90%;
+}
+
+form {
+  gap: 1rem;  
+}
+
+.loginFormInputs{
+  width: 80%;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.loginFormInputs:hover {
+  background-color: rgb(246, 243, 243);
+  border: 0.7px solid rgb(84, 84, 84);
+}
+
+.OtpButton{
+  padding: 0.4rem 0.8rem;
+  background-color: #802d5a;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.OtpButton:hover{
+  background-color: #662549;
+}
+
+.newAccountLink{
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 0.6em;
+}

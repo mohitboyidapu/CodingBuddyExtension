@@ -1,0 +1,28 @@
+/* colors.css */
+:root {
+    /* Primary Colors */
+    --primary-background: #2779a7; /* Deep Blue */
+    --primary-text: #FFFFFF; /* White */
+  
+    /* Secondary Colors */
+    --secondary-background: #FF9398; /* Salmon Pink */
+    --secondary-text: #000000; /* Black */
+  
+    /* Accent Colors */
+    --accent-primary: #000000; /* Black */
+    --accent-secondary: #FF9398; /* Salmon Pink */
+  
+    /* Borders and Dividers */
+    --border-color: #000000; /* Black Border */
+  
+    /* Button Colors */
+    --button-primary-background: var(--accent-primary);
+    --button-primary-text: var(--primary-text);
+  
+    --button-secondary-background: var(--accent-secondary);
+    --button-secondary-text: var(--secondary-text);
+  
+    /* Link Color */
+    --link-color: #2779a7; /* Deep Blue (as an additional color) */
+  }
+  

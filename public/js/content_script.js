@@ -1,5 +1,6 @@
 /*global chrome*/
 
+
 const createAndInjectLauncher = () => {
   console.log("Inside create launcher");
   const launcher = document.createElement("div");
@@ -15,7 +16,7 @@ const createAndInjectLauncher = () => {
   launcher.style.padding = "10px";
   launcher.style.borderRadius = "5px";
   launcher.style.cursor = "pointer";
-  launcher.style.zIndex = "9999"; // Ensure it's above other content
+  launcher.style.zIndex = "999999"; // Ensure it's above other content
   launcher.style.transition = "all 0.4s ease 0s";
 
   // Adding functionality
@@ -34,35 +35,33 @@ const createAndInjectEditorIframe = () => {
 
   outerContainer.style.zIndex = "100000"; //increase this to INT_MAX
   // outerContainer.style.width = "300px"; // Should change width and height
-  outerContainer.style.height = "80%";
-  outerContainer.style.position = "relative";
-  outerContainer.style.right = "-100%";
-  // outerContainer.style.top = "20px";
+  outerContainer.style.height = "100%";
+  outerContainer.style.position = "fixed";
+  // outerContainer.style.right = "-100%";
+  outerContainer.style.right = "10px"; // After dev comment this line and uncomment top line
+  outerContainer.style.top = "0px";
   outerContainer.style.transition = "all 0.4s ease 0s";
+  outerContainer.style.display = "flex";
+  outerContainer.style.justifyContent = "center";
+  outerContainer.style.alignItems = "center";
 
   const shadowRoot = outerContainer.attachShadow({ mode: "open" });
 
   const editorIframe = document.createElement("iframe");
   editorIframe.src = chrome.runtime.getURL("../popup.html");
   editorIframe.id = "cb_editor_iframe";
-  editorIframe.style.height = "100%";
+  editorIframe.style.height = "80%";  
+  editorIframe.style.width = "21rem";  
+  editorIframe.style.border = "0px solid black";
   editorIframe.style.borderRadius = "1rem";
+  editorIframe.style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 1px 4px 0px  ";
+
+
 
   shadowRoot.appendChild(editorIframe);
 
-  // append it to leetcode question
-  const editorElements = document.querySelectorAll(
-    '[class*="wrapper__"] [class*="container__"]:nth-child(2)'
-  );
-  if (editorElements.length === 1) {
-    console.log("########################");
-    editorElements[0].appendChild(outerContainer);
-  } else {
-    alert("Leetcode question site not found");
-  }
-
   // append outer container to Website
-  // document.body.appendChild(outerContainer);
+  document.body.appendChild(outerContainer);
 };
 
 const toggleDisplayOfEditorContainer = () => {
@@ -77,12 +76,12 @@ const toggleDisplayOfEditorContainer = () => {
 };
 
 const afterPageLoad = () => {
-  console.log("Timer completed")
+  console.log("Timer completed");
   createAndInjectEditorIframe();
   createAndInjectLauncher();
-}
+};
 // make this load after the page load
-setTimeout(afterPageLoad, 4000);
+setTimeout(afterPageLoad, 1000);
 
 // Handling Messages
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
